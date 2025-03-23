@@ -1,0 +1,133 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f2f6f7;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Appointment Form Styling */
+.appoint-form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2d3436;
+}
+
+.appoint-form input,
+.appoint-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1.5px solid #ccc;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: #fefefe;
+}
+
+.appoint-form button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 14px;
+    background-color: #16a085;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.appoint-form button:hover {
+    background-color: #138d75;
+}
+
+/* History Table Styling */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+.history-table th,
+.history-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.history-table th {
+    background-color: #ecf0f1;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.history-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.history-table tr:hover {
+    background-color: #f1f1f1;
+}
+/* Styling already existing stays the same */
+.upcoming-general-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #eafaf1;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+}
+
+.upcoming-general-section h2 {
+    color: #117a65;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.general-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.general-table th,
+.general-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+.general-table th {
+    background-color: #d4efdf;
+    color: #1e8449;
+}
+
+.general-table tr:nth-child(even) {
+    background-color: #f9fefb;
+}
+
+.general-table tr:hover {
+    background-color: #e9f7ef;
+}

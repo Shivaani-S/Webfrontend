@@ -1,0 +1,336 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow-y: auto;
+}
+
+/* Background Image */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('vending.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+/* Container for Centering */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Code Box */
+.code-box {
+  background: linear-gradient(135deg, #274c6e, #151204);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.code-box h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.code-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.refresh-button,
+.speak-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.refresh-button:hover,
+.speak-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.button-group .icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+/* Search Bar */
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #333; /* Dark border */
+  background: #274c6e; /* Dark background */
+  color: rgb(246, 245, 245); /* Black font */
+  width: 70%;
+  font-size: 1rem;
+  outline: none; /* Remove default outline */
+}
+
+.search-bar input::placeholder {
+  color: rgb(246, 245, 245); /* Dark placeholder text */
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #4CAF50; /* Green background */
+  color: white; /* White text */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+  background: #45a049; /* Darker green on hover */
+}
+
+/* Medicine Categories */
+.categories {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.categories button {
+  padding: 10px 20px;
+  border: 2px solid #274c6e; /* Dark border */
+  border-radius: 10px;
+  background: #274c6e; /* Dark background */
+  color: rgb(246, 245, 245); /* Black font */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.categories button:hover {
+  background: #274c6e; /* Slightly lighter dark background on hover */
+  color: white; /* White text on hover */
+}
+
+/* Medicine Details Box */
+.medicine-details-box {
+  background: linear-gradient(135deg, #274c6e, #151204);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.medicine-details-box h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.medicine-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.medicine-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.medicine-name {
+  font-weight: bold;
+}
+
+.medicine-price {
+  color: #ffdd57;
+}
+
+.medicine-quantity {
+  width: 50px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.medicine-expiry {
+  font-size: 0.9rem;
+  color: #ff6b6b;
+}
+
+.medicine-dosage {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.add-to-cart {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+/* Total Bill */
+.total-bill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+}
+
+.total-bill span {
+  font-weight: bold;
+}
+
+#total-bill-amount {
+  color: #ffdd57;
+}
+
+/* Feedback Form */
+.feedback {
+  margin-top: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #274c6e, #151204);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: white;
+  width: 100%;
+  max-width: 600px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.feedback h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feedback textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  margin-bottom: 10px;
+}
+
+.feedback button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+/* Notifications */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notification button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .code-box, .medicine-details-box, .feedback {
+    max-width: 90%;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .categories {
+    flex-direction: column;
+  }
+}

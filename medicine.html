@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Code Generator</title>
+  <link rel="stylesheet" href="medicine.css">
+</head>
+<body>
+  <!-- Background Image -->
+  <div class="background-image"></div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Code Box -->
+    <div class="code-box">
+      <h2>Your Medicine Code</h2>
+      <div class="code-display" id="code-display"></div>
+      <div class="button-group">
+        <button onclick="refreshCode()" class="refresh-button">
+          <img src="assets/icons/refresh.svg" alt="Refresh" class="icon"> Refresh Code
+        </button>
+        <button onclick="speakCode()" class="speak-button">
+          <img src="assets/icons/speak.svg" alt="Speak Code" class="icon"> Speak Code
+        </button>
+      </div>
+    </div>
+
+    <!-- Medicine Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search for medicine">
+      <button onclick="searchMedicine()">Search</button>
+    </div>
+
+    <!-- Medicine Categories -->
+    <div class="categories">
+      <button onclick="filterCategory('all')">All</button>
+      <button onclick="filterCategory('Painkillers')">Painkillers</button>
+      <button onclick="filterCategory('Antibiotics')">Antibiotics</button>
+      <button onclick="filterCategory('Vitamins')">Vitamins</button>
+    </div>
+
+    <!-- Medicine Details Box -->
+    <div class="medicine-details-box">
+      <h2>Medicine Details</h2>
+      <div class="medicine-list">
+        <!-- Painkillers -->
+        <div class="medicine-item" data-category="Painkillers">
+          <span class="medicine-name">Medicine A</span>
+          <span class="medicine-price">$10</span>
+          <input type="number" class="medicine-quantity" value="0" min="0" onchange="updateTotalBill()">
+          <span class="medicine-expiry">Expiry: 12/2024</span>
+          <span class="medicine-dosage">2 tablets/day</span>
+          <button class="add-to-cart" onclick="addToCart('Medicine A', 10)">Add to Cart</button>
+        </div>
+        <div class="medicine-item" data-category="Painkillers">
+          <span class="medicine-name">Medicine B</span>
+          <span class="medicine-price">$15</span>
+          <input type="number" class="medicine-quantity" value="0" min="0" onchange="updateTotalBill()">
+          <span class="medicine-expiry">Expiry: 10/2025</span>
+          <span class="medicine-dosage">1 tablet/day</span>
+          <button class="add-to-cart" onclick="addToCart('Medicine B', 15)">Add to Cart</button>
+        </div>
+
+        <!-- Antibiotics -->
+        <div class="medicine-item" data-category="Antibiotics">
+          <span class="medicine-name">Medicine C</span>
+          <span class="medicine-price">$20</span>
+          <input type="number" class="medicine-quantity" value="0" min="0" onchange="updateTotalBill()">
+          <span class="medicine-expiry">Expiry: 08/2024</span>
+          <span class="medicine-dosage">3 tablets/day</span>
+          <button class="add-to-cart" onclick="addToCart('Medicine C', 20)">Add to Cart</button>
+        </div>
+        <div class="medicine-item" data-category="Antibiotics">
+          <span class="medicine-name">Medicine D</span>
+          <span class="medicine-price">$25</span>
+          <input type="number" class="medicine-quantity" value="0" min="0" onchange="updateTotalBill()">
+          <span class="medicine-expiry">Expiry: 05/2025</span>
+          <span class="medicine-dosage">2 tablets/day</span>
+          <button class="add-to-cart" onclick="addToCart('Medicine D', 25)">Add to Cart</button>
+        </div>
+
+        <!-- Vitamins -->
+        <div class="medicine-item" data-category="Vitamins">
+          <span class="medicine-name">Medicine E</span>
+          <span class="medicine-price">$30</span>
+          <input type="number" class="medicine-quantity" value="0" min="0" onchange="updateTotalBill()">
+          <span class="medicine-expiry">Expiry: 12/2026</span>
+          <span class="medicine-dosage">1 tablet/day</span>
+          <button class="add-to-cart" onclick="addToCart('Medicine E', 30)">Add to Cart</button>
+        </div>
+        <div class="medicine-item" data-category="Vitamins">
+          <span class="medicine-name">Medicine F</span>
+          <span class="medicine-price">$35</span>
+          <input type="number" class="medicine-quantity" value="0" min="0" onchange="updateTotalBill()">
+          <span class="medicine-expiry">Expiry: 11/2026</span>
+          <span class="medicine-dosage">2 tablets/day</span>
+          <button class="add-to-cart" onclick="addToCart('Medicine F', 35)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Total Bill -->
+      <div class="total-bill">
+        <span>Total Bill:</span>
+        <span id="total-bill-amount">$0</span>
+      </div>
+    </div>
+
+    <!-- Feedback Form -->
+    <div class="feedback">
+      <h2>Feedback</h2>
+      <textarea placeholder="Your feedback..."></textarea>
+      <button onclick="submitFeedback()">Submit</button>
+    </div>
+
+    <!-- Notifications -->
+    <div class="notification">
+      <span>New medicine added: Medicine G</span>
+      <button onclick="closeNotification()">×</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

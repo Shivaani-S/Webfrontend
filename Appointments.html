@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Rural Appointments</title>
+    <link rel="stylesheet" href="appointment.css"> <!-- Linking external CSS file -->
+</head>
+<body>
+
+    <div class="container">
+        <h1> CareConnect - Appointment & History</h1>
+
+        <!-- Appointment Booking Form -->
+        <section class="appoint-section">
+            <h2>📅 Book a Medical Appointment</h2>
+            <h3><center>(if your are in need of a medical visit)</center> </h3>
+            <form class="appoint-form">
+                <label for="name">👤 Patient Name</label>
+            <select id="issue" name="issue" required>
+                <option disabled selected>Enter patient's full name</option>
+                <option>Mr.Kumaran (59 years old)</option>
+                <option>Mrs.Jasmine (50 years old)</option>
+                <option>Mr.Katir (39 years old)</option>
+                <option>Mrs.Yamuna (34 years old)</option>
+                <option>Others</option>
+                
+            </select>
+
+                <label for="appointment-date">🗓️ Date:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+
+                <label for="appointment-time">⏰ Time:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required>
+
+                <label for="doctor">👨‍⚕️ Choose Doctor:</label>
+                <select id="doctor" name="doctor" required>
+                    <option disabled selected>Select Doctor</option>
+                    <option>Dr. Anitha (General Physician)</option>
+                    <option>Dr. Karthik (Pediatrician)</option>
+                    <option>Dr. Meena (Gynecologist)</option>
+                    <option>Dr. Senthil (Cardiologist)</option>
+                </select>
+
+                <button type="submit">📥 Book Appointment</button>
+            </form>
+        </section>
+        <section class="upcoming-general-section">
+            <h2>🗓️ Upcoming General Appointments</h2>
+            <table class="general-table">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Doctor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mr.Kumaran (59 years old)</td>
+                        <td>2025-03-24</td>
+                        <td>09:30 AM</td>
+                        <td>Dr. Anitha</td>
+                    </tr>
+                    <tr>
+                        <td>Mrs.Jasmine (50 years old)</td>
+                        <td>2025-03-25</td>
+                        <td>11:00 AM</td>
+                        <td>Dr. Anitha</td>
+                    </tr>
+                    <tr>
+                        <td>Mr.Kathir (39 years old)</td>
+                        <td>2025-03-26</td>
+                        <td>02:00 PM</td>
+                        <td>Dr. Anitha</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Appointment History Table -->
+        <section class="history-section">
+            <h2>📜 Appointment History</h2>
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Doctor</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mrs.Jasmine (50 years old)</td>
+                        <td>2025-03-18</td>
+                        <td>11:00 AM</td>
+                        <td>Dr. Anitha</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>Mrs.Yamuna (34 years old)</td>
+                        <td>2025-03-19</td>
+                        <td>03:30 PM</td>
+                        <td>Dr. Meena</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>Suresh (9 years old) 
+                            (others)</td>
+                        <td>2025-03-20</td>
+                        <td>10:00 AM</td>
+                        <td>Dr. Senthil</td>
+                        <td>Completed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+</body>
+</html>
+
+  

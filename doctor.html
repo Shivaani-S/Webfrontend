@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health App - Available Doctors</title>
+  <link rel="stylesheet" href="doctor.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>👩‍⚕ Available Doctors</h1>
+    </header>
+
+    <div class="doctor-list">
+      <div class="doctor-card">
+        <div class="doctor-profile">
+          <img src="Dr.kumar.png" alt="Dr. Kumar" class="doctor-photo">
+          <div class="doctor-info">
+            <h3>Dr. Kumar</h3>
+            <p>General Physician</p>
+          </div>
+        </div>
+        <div class="doctor-actions">
+          <button class="call-btn" onclick="callDoctor('Dr. Kumar')">📞 Call</button>
+          <button class="video-btn" onclick="videoCallDoctor('Dr. Kumar')">🎥 Video Call</button>
+        </div>
+      </div>
+    
+      <div class="doctor-card">
+        <div class="doctor-profile">
+          <img src="Dr.meena.png" alt="Dr. Meena" class="doctor-photo">
+          <div class="doctor-info">
+            <h3>Dr. Meena</h3>
+            <p>Pediatric Specialist</p>
+          </div>
+        </div>
+        <div class="doctor-actions">
+          <button class="call-btn" onclick="callDoctor('Dr. Meena')">📞 Call</button>
+          <button class="video-btn" onclick="videoCallDoctor('Dr. Meena')">🎥 Video Call</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="back-btn">
+      <a href="index.html">⬅ Back to Home</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

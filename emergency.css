@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #c82333;
+    font-size: 28px;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+.emergency-btn {
+    display: block;
+    margin: 25px auto;
+    background-color: #dc3545;
+    color: white;
+    font-size: 20px;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.emergency-btn:hover {
+    background-color: #bd2130;
+}
+
+.help-section, .location-section {
+    margin-top: 30px;
+}
+
+h2 {
+    color: #444;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.note {
+    margin-top: 30px;
+    background-color: #fff3cd;
+    padding: 15px;
+    border-left: 6px solid #ffeeba;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #856404;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #eef2f3;
+    padding: 50px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #e74c3c;
+    margin-bottom: 30px;
+}
+
+.emergency-form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.emergency-form input,
+.emergency-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.other-input-box {
+    display: none;
+}
+
+.emergency-form:has(select#issue option:checked[value="Other"]) .other-input-box {
+    display: block;
+}
+
+button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 14px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b;
+}

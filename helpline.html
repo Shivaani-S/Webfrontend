@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareConnect - Emergency Helpline</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      overflow-x: hidden;
+    }
+
+    .screen {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      max-width: 700px;
+      width: 90%;
+      margin: 60px auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .screen h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #0d47a1;
+    }
+
+    .screen p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .screen button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 25px;
+      margin: 15px 0;
+      width: 100%;
+      font-size: 16px;
+      background-color: #1976d2;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .screen button:hover {
+      background-color: #1565c0;
+      transform: scale(1.03);
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #eeeeee;
+      color: #0d47a1;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #e3f2fd;
+      transform: scale(1.05);
+    }
+
+    .info-box {
+      text-align: left;
+      background-color: #f1f8e9;
+      padding: 25px;
+      border-left: 6px solid #388e3c;
+      margin-top: 30px;
+      border-radius: 10px;
+      color: #2e7d32;
+    }
+
+    .info-box h3 {
+      margin-bottom: 10px;
+      color: #1b5e20;
+    }
+
+    .sos-details, .health-data, .tips {
+      background-color: #fafafa;
+      padding: 20px;
+      border-left: 5px solid #e53935;
+      margin-top: 25px;
+      border-radius: 10px;
+      font-size: 15px;
+      color: #444;
+      text-align: left;
+    }
+
+    .sos-details strong, .health-data strong, .tips strong {
+      color: #d32f2f;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .sos-animated {
+      margin-top: 30px;
+      font-weight: bold;
+      color: #d32f2f;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .bg-pulse {
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 300px;
+      background: rgba(25, 118, 210, 0.2);
+      border-radius: 50%;
+      animation: pulse 3s infinite;
+      z-index: 0;
+    }
+
+    @keyframes pulse {
+      0% { transform: translateX(-50%) scale(1); opacity: 1; }
+      70% { transform: translateX(-50%) scale(1.5); opacity: 0; }
+      100% { transform: translateX(-50%) scale(1); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-pulse"></div>
+  <div class="screen">
+    <h2>🚨 Emergency Helpline</h2>
+    <p>In case of a health emergency, take immediate action using the below options.</p>
+
+    <button onclick="callEmergency()">
+       Call Emergency Helpline
+    </button>
+
+    <button onclick="sendSOS()">
+    Send SOS Message
+    </button>
+
+    <div class="health-data">
+      <strong>Patient Quick Info:</strong>
+      <ul>
+        <li><b>Name:</b> Mrs. Kumaran</li>
+        <li><b>Age:</b> 48 years</li>
+        <li><b>Blood Group:</b> B+</li>
+        <li><b>Allergies:</b> Penicillin</li>
+        <li><b>Chronic Conditions:</b> Diabetes, Hypertension</li>
+        <li><b>Emergency Contact:</b> Mr. Kumaran - +91 98765 43210</li>
+      </ul>
+    </div>
+
+    <div class="sos-details">
+      <strong>SOS Function Overview:</strong>
+      <ul>
+        <li>📍 Automatically shares your GPS location to nearest health center.</li>
+        <li>🚑 Notifies emergency responders with patient's health profile.</li>
+        <li>📞 Sends emergency SMS and call alert to registered contacts.</li>
+        <li>📋 Transmits vital data including blood group, medication, conditions.</li>
+        <li>🛰 Real-time tracking continues until patient is safe.</li>
+      </ul>
+    </div>
+
+    <div class="tips">
+      <strong>Helpline Tips & First Aid:</strong>
+      <ul>
+        <li>✔ Store helpline numbers on speed dial.</li>
+        <li>✔ Remain calm and explain symptoms clearly to responders.</li>
+        <li>✔ Avoid moving a person with possible fractures unless life-threatening.</li>
+        <li>✔ Know the nearest health center in your area.</li>
+      </ul>
+    </div>
+
+    <div id="sosStatus" class="sos-animated" style="display:none;">🔴 Sending SOS Alert...</div>
+    <a href="index.html" class="button">⬅ Back</a>
+  </div>
+
+  <script>
+    function callEmergency() {
+      alert('📞 Dialing Emergency Helpline... Hold on.');
+    }
+
+    function sendSOS() {
+      const status = document.getElementById('sosStatus');
+      status.style.display = 'block';
+      setTimeout(() => {
+        alert('✅ SOS Sent! Team notified. Stay calm.');
+        status.innerText = '✅ SOS Sent! Help is on the way.';
+        status.style.color = '#2e7d32';
+        status.style.animation = 'none';
+      }, 2000);
+    }
+  </script>
+</body>
+</html>

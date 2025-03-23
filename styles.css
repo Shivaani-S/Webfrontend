@@ -1,0 +1,254 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9; /* Light background for the page */
+  color: #333;
+}
+
+/* Top Bar (Switch User + Language Changer) */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #1976d2; /* Dark blue background */
+  color: white;
+}
+
+.switch-user button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background: #542ea1; /* Green */
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+/* Switch User Dropdown */
+.switch-user {
+  position: relative;
+  display: inline-block;
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin-top: 5px;
+}
+
+.user-option {
+  padding: 10px 20px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-option:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown when active */
+.user-dropdown.active {
+  display: block;
+}
+
+.switch-user button:hover {
+  background: #693baf; /* Darker green on hover */
+}
+
+.language-changer select {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  background: white;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.language-changer select:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Banner Section */
+.banner {
+  height: 300px; /* Adjust height as needed */
+  background-image: url('bannerori.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-overlay {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+  padding: 20px 40px;
+  border-radius: 15px;
+}
+
+.banner-overlay h1 {
+  font-size: 3.5rem; /* Larger font size */
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.banner-overlay p {
+  font-size: 1.5rem; /* Larger font size */
+  margin: 10px 0 0;
+  color: white;
+  opacity: 0.9;
+}
+
+/* Welcome Section */
+.welcome-section {
+  background: #e3f2fd; /* Light blue background */
+  padding: 40px 20px;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #1976d2; /* Darker blue for heading */
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0;
+}
+
+/* Button Grid Section */
+.button-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.button {
+  padding: 20px;
+  border-radius: 15px;
+  background: white;
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0; /* Light border for a clean look */
+}
+
+.button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.button p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  text-align: center;
+}
+
+/* Specific Button Colors */
+.button.doctor {
+  background: #e3f2fd; /* Light blue */
+  border-color: #90caf9; /* Matching border color */
+}
+
+.button.medicine {
+  background: #fbe9e7; /* Light red */
+  border-color: #ffab91; /* Matching border color */
+}
+
+.button.tips {
+  background: #f1f8e9; /* Light green */
+  border-color: #c5e1a5; /* Matching border color */
+}
+
+.button.helpline {
+  background: #ffebee; /* Light pink */
+  border-color: #ef9a9a; /* Matching border color */
+}
+
+.button.details {
+  background: #fff3e0; /* Light orange */
+  border-color: #ffcc80; /* Matching border color */
+}
+
+.button.appointments {
+  background: #fce4ec; /* Light pink */
+  border-color: #f48fb1; /* Matching border color */
+}
+
+.button.reports {
+  background: #e0f7fa; /* Light cyan */
+  border-color: #80deea; /* Matching border color */
+}
+
+.button.emergency {
+  background: #ffebee; /* Light red */
+  border-color: #ef9a9a; /* Matching border color */
+}
+
+/* Footer Section */
+.footer {
+  background: #333; /* Dark background for footer */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+

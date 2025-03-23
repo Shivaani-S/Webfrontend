@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareConnect - Health App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Bar (Switch User + Language Changer) -->
+  <div class="top-bar">
+    <div class="switch-user">
+      <button onclick="toggleUserDropdown()" data-translate="switch-user">Switch User</button>
+      <div id="user-dropdown" class="user-dropdown">
+        <div class="user-option" onclick="switchUser('Mr.Kumaran')" data-translate="me">Mr.Kumaran</div>
+        <div class="user-option" onclick="switchUser('Mrs.Jasmine')" data-translate="mom">Mrs.Jasmine</div>
+        <div class="user-option" onclick="switchUser('Mr.Kathir')" data-translate="dad">Mr.Kathir</div>
+        <div class="user-option" onclick="switchUser('Mrs.Yamuna')" data-translate="dad">Mrs.Yamuna</div>
+        <div class="user-option" onclick="switchUser('new user')" data-translate="dad">Add user</div><a href="adduser.html"></a>
+      </div>
+    </div>
+    <div class="language-changer">
+      <select id="language-select" onchange="changeLanguage()">
+        <option value="en" data-translate="english">English</option>
+        <option value="hi" data-translate="hindi">Hindi</option>
+        <option value="ta" data-translate="tamil">Tamil</option>
+        <option value="te" data-translate="telugu">Telugu</option>
+        <option value="kn" data-translate="kannada">Kannada</option>
+        <option value="ml" data-translate="malayalam">Malayalam</option>
+        <option value="bn" data-translate="bengali">Bengali</option>
+        <option value="mr" data-translate="marathi">Marathi</option>
+        <option value="gu" data-translate="gujarati">Gujarati</option>
+        <option value="pa" data-translate="punjabi">Punjabi</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Banner Section -->
+  <div class="banner">
+    <div class="banner-overlay">
+      <h1 data-translate="app-name">CareConnect</h1>
+      <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;" data-translate="tagline">Because every life matters!</p>
+    </div>
+  </div>
+
+  <!-- Welcome Section -->
+  <div class="welcome-section">
+    <div class="main-content">
+      <h2 data-translate="welcome">Welcome to CareConnect</h2>
+      <p data-translate="welcome-message">Your health, your priority. Stay connected, stay healthy.</p>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Button Grid Section -->
+  <div class="button-section">
+    <div class="button-grid">
+      <a href="doctor.html" class="button doctor">
+        <span data-translate="doctor">Doctor</span>
+        <p data-translate="doctor-description">Connect with certified doctors for consultations.</p>
+      </a>
+      <a href="medicine.html" class="button medicine">
+        <span data-translate="medicine">Medicine</span>
+        <p data-translate="medicine-description">Order and manage your medications seamlessly.</p>
+      </a>
+      <a href="health-tips.html" class="button tips">
+        <span data-translate="health-tips">Health Tips</span>
+        <p data-translate="health-tips-description">Get daily health tips and stay informed.</p>
+      </a>
+      <a href="helpline.html" class="button helpline">
+        <span data-translate="helpline">Helpline</span>
+        <p data-translate="helpline-description">24/7 emergency support at your fingertips.</p>
+      </a>
+      <a href="your-details.html" class="button details">
+        <span data-translate="your-details">Your Details</span>
+        <p data-translate="your-details-description">View and manage your health data.</p>
+      </a>
+      <a href="appointments.html" class="button appointments">
+        <span data-translate="appointments">Appointments</span>
+        <p data-translate="appointments-description">Schedule and manage your medical appointments.</p>
+      </a>
+      <a href="reports.html" class="button reports">
+        <span data-translate="reports">Reports</span>
+        <p data-translate="reports-description">Access and download your medical reports.</p>
+      </a>
+      <a href="emergency.html" class="button emergency">
+        <span data-translate="emergency">Emergency</span>
+        <p data-translate="emergency-description">Quick access to emergency services.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p data-translate="copyright">&copy; 2023 CareConnect. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#" data-translate="privacy-policy">Privacy Policy</a>
+        <a href="#" data-translate="terms-of-service">Terms of Service</a>
+        <a href="#" data-translate="contact-us">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
